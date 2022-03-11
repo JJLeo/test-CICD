@@ -4,10 +4,36 @@ on:
     branches:
       - main
 jobs:
-  deploy:
+  test:
     runs-on: ubuntu-latest
     steps:
         - name: checkout
           uses: actions/checkout@v2
         - name: compile
-          run: g++ a.cpp -o a
+          run: g++ checker.cpp -o checker
+          run: g++ validator.cpp -o validator
+          run: g++ generator.cpp -o generator
+          run: g++ solution1.cpp -o solution1
+          run: g++ solution2.cpp -o solution2
+        - name: run-generator
+          run: generator 50 100000 96010 > 1
+          run: generator 50 100000 97001 > 2
+          run: generator 50 100000 97002 > 3
+          run: generator 50 100000 97003 > 4
+          run: generator 50 100000 97004 > 5
+          run: generator 50 100000 97005 > 6
+          run: generator 50 100000 97006 > 7
+          run: generator 50 100000 97007 > 8
+          run: generator 50 100000 97008 > 9
+          run: generator 50 100000 97009 > 10
+        - name: run-validator
+          run: validator < 1
+          run: validator < 2
+          run: validator < 3
+          run: validator < 4
+          run: validator < 5
+          run: validator < 6
+          run: validator < 7
+          run: validator < 8
+          run: validator < 9
+          run: validator < 10
