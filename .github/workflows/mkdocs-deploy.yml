@@ -1,0 +1,10 @@
+name: mkdocs-deploy
+on:
+  push:
+    branches:
+      - main
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+      - run: g++ a.cpp -o a
+      - run: ./a
