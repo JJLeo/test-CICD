@@ -17,25 +17,61 @@ jobs:
            g++ solution2.cpp -o solution2
         - name: run-generator
           run: |
-           ./generator 50 100000 96010 > 1
-           ./generator 50 100000 97001 > 2
-           ./generator 50 100000 97002 > 3
-           ./generator 50 100000 97003 > 4
-           ./generator 50 100000 97004 > 5
-           ./generator 50 100000 97005 > 6
-           ./generator 50 100000 97006 > 7
-           ./generator 50 100000 97007 > 8
-           ./generator 50 100000 97008 > 9
-           ./generator 50 100000 97009 > 10
+           ./generator 50 100000 96010 > 1.in
+           ./generator 50 100000 97001 > 2.in
+           ./generator 50 100000 97002 > 3.in
+           ./generator 50 100000 97003 > 4.in
+           ./generator 50 100000 97004 > 5.in
+           ./generator 50 100000 97005 > 6.in
+           ./generator 50 100000 97006 > 7.in
+           ./generator 50 100000 97007 > 8.in
+           ./generator 50 100000 97008 > 9.in
+           ./generator 50 100000 97009 > 10.in
         - name: run-validator
           run: |
-           ./validator < 1
-           ./validator < 2
-           ./validator < 3
-           ./validator < 4
-           ./validator < 5
-           ./validator < 6
-           ./validator < 7
-           ./validator < 8
-           ./validator < 9
-           ./validator < 10
+           ./validator < 1.in
+           ./validator < 2.in
+           ./validator < 3.in
+           ./validator < 4.in
+           ./validator < 5.in
+           ./validator < 6.in
+           ./validator < 7.in
+           ./validator < 8.in
+           ./validator < 9.in
+           ./validator < 10.in
+        - name: run-solution1
+          run: |
+           ./solution1 < 1 > 1.ans
+           ./solution1 < 2 > 2.ans
+           ./solution1 < 3 > 3.ans
+           ./solution1 < 4 > 4.ans
+           ./solution1 < 5 > 5.ans
+           ./solution1 < 6 > 6.ans
+           ./solution1 < 7 > 7.ans
+           ./solution1 < 8 > 8.ans
+           ./solution1 < 9 > 9.ans
+           ./solution1 < 10 > 10.ans
+        - name: run-solution2
+          run: |
+           ./solution2 < 1 > 1.out
+           ./solution2 < 2 > 2.out
+           ./solution2 < 3 > 3.out
+           ./solution2 < 4 > 4.out
+           ./solution2 < 5 > 5.out
+           ./solution2 < 6 > 6.out
+           ./solution2 < 7 > 7.out
+           ./solution2 < 8 > 8.out
+           ./solution2 < 9 > 9.out
+           ./solution2 < 10 > 10.out
+        - name: run-checker
+          run: |
+           ./checker 1.in 1.out 1.ans
+           ./checker 2.in 2.out 2.ans
+           ./checker 3.in 3.out 3.ans
+           ./checker 4.in 4.out 4.ans
+           ./checker 5.in 5.out 5.ans
+           ./checker 6.in 6.out 6.ans
+           ./checker 7.in 7.out 7.ans
+           ./checker 8.in 8.out 8.ans
+           ./checker 9.in 9.out 9.ans
+           ./checker 10.in 10.out 10.ans
