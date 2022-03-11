@@ -3,7 +3,7 @@
 
 using namespace std;
 
-int t, n;
+int t, n
 
 int main(){
 	printf("123456");
