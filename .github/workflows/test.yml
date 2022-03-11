@@ -27,7 +27,7 @@ jobs:
                generator 50 100000 97008 > 9
                generator 50 100000 97009 > 10
         - name: run-validator
-               validator < 1
+          run: validator < 1
                validator < 2
                validator < 3
                validator < 4
