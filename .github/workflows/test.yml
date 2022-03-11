@@ -1,4 +1,4 @@
-name: mkdocs-deploy
+name: test
 on:
   push:
     branches:
@@ -7,4 +7,3 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
       - run: g++ a.cpp -o a
-      - run: ./a
