@@ -6,4 +6,6 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-      - run: g++ a.cpp -o a
+    steps:
+        - name: compile
+          run: g++ a.cpp -o a
