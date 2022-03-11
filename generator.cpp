@@ -17,7 +17,7 @@ int main(int argc,char* argv[])
 		int l = rnd.next(1,max(m-len,1));
 		//if(i == 1 && pre && l == 0) l = 1; 
 		int r = rnd.next(min(m,l+len),m);
-		cout<<l<<" "<<r<<endl;
+		cout<<l<<" "<<-1<<endl;
 	}
 	return 0;
 }
