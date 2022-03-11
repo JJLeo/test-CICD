@@ -11,29 +11,29 @@ jobs:
           uses: actions/checkout@v2
         - name: compile
           run: g++ checker.cpp -o checker
-          run: g++ validator.cpp -o validator
-          run: g++ generator.cpp -o generator
-          run: g++ solution1.cpp -o solution1
-          run: g++ solution2.cpp -o solution2
+               g++ validator.cpp -o validator
+               g++ generator.cpp -o generator
+               g++ solution1.cpp -o solution1
+               g++ solution2.cpp -o solution2
         - name: run-generator
           run: generator 50 100000 96010 > 1
-          run: generator 50 100000 97001 > 2
-          run: generator 50 100000 97002 > 3
-          run: generator 50 100000 97003 > 4
-          run: generator 50 100000 97004 > 5
-          run: generator 50 100000 97005 > 6
-          run: generator 50 100000 97006 > 7
-          run: generator 50 100000 97007 > 8
-          run: generator 50 100000 97008 > 9
-          run: generator 50 100000 97009 > 10
+               generator 50 100000 97001 > 2
+               generator 50 100000 97002 > 3
+               generator 50 100000 97003 > 4
+               generator 50 100000 97004 > 5
+               generator 50 100000 97005 > 6
+               generator 50 100000 97006 > 7
+               generator 50 100000 97007 > 8
+               generator 50 100000 97008 > 9
+               generator 50 100000 97009 > 10
         - name: run-validator
-          run: validator < 1
-          run: validator < 2
-          run: validator < 3
-          run: validator < 4
-          run: validator < 5
-          run: validator < 6
-          run: validator < 7
-          run: validator < 8
-          run: validator < 9
-          run: validator < 10
+               validator < 1
+               validator < 2
+               validator < 3
+               validator < 4
+               validator < 5
+               validator < 6
+               validator < 7
+               validator < 8
+               validator < 9
+               validator < 10
