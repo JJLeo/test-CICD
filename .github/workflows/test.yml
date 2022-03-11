@@ -41,28 +41,28 @@ jobs:
            ./validator < 10.in
         - name: run-solution1
           run: |
-           ./solution1 < 1 > 1.ans
-           ./solution1 < 2 > 2.ans
-           ./solution1 < 3 > 3.ans
-           ./solution1 < 4 > 4.ans
-           ./solution1 < 5 > 5.ans
-           ./solution1 < 6 > 6.ans
-           ./solution1 < 7 > 7.ans
-           ./solution1 < 8 > 8.ans
-           ./solution1 < 9 > 9.ans
-           ./solution1 < 10 > 10.ans
+           ./solution1 < 1.in > 1.ans
+           ./solution1 < 2.in > 2.ans
+           ./solution1 < 3.in > 3.ans
+           ./solution1 < 4.in > 4.ans
+           ./solution1 < 5.in > 5.ans
+           ./solution1 < 6.in > 6.ans
+           ./solution1 < 7.in > 7.ans
+           ./solution1 < 8.in > 8.ans
+           ./solution1 < 9.in > 9.ans
+           ./solution1 < 10.in > 10.ans
         - name: run-solution2
           run: |
-           ./solution2 < 1 > 1.out
-           ./solution2 < 2 > 2.out
-           ./solution2 < 3 > 3.out
-           ./solution2 < 4 > 4.out
-           ./solution2 < 5 > 5.out
-           ./solution2 < 6 > 6.out
-           ./solution2 < 7 > 7.out
-           ./solution2 < 8 > 8.out
-           ./solution2 < 9 > 9.out
-           ./solution2 < 10 > 10.out
+           ./solution2 < 1.in > 1.out
+           ./solution2 < 2.in > 2.out
+           ./solution2 < 3.in > 3.out
+           ./solution2 < 4.in > 4.out
+           ./solution2 < 5.in > 5.out
+           ./solution2 < 6.in > 6.out
+           ./solution2 < 7.in > 7.out
+           ./solution2 < 8.in > 8.out
+           ./solution2 < 9.in > 9.out
+           ./solution2 < 10.in > 10.out
         - name: run-checker
           run: |
            ./checker 1.in 1.out 1.ans
